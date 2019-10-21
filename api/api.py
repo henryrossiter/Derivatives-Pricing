@@ -9,6 +9,7 @@ def getCurrentAskPrice(stock):
     print('{} ask price not found'.format(stock))
     return
   
-def getOptionData(stocks):
-  optionData = r.find_options_for_list_of_stocks_by_expiration_date(stocks, optionType='call', expirationDate='2019-10-25')
+def getOptionData(stocks, date):
+  optionData = r.find_options_for_list_of_stocks_by_expiration_date(stocks, optionType='call', expirationDate=date)
   return optionData
+
